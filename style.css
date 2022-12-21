@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: none;
+    outline: none;
+}
+
+html , body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+    position: relative;
+}
+
+.popup{
+    position: absolute;
+    top: 0;
+    max-width: 400px;
+    display: none;
+    flex-direction: column;
+    background-color: #000;
+    color: #eee;
+    padding: 30px;
+    margin: 0 10px;
+    border-radius: 0 0 10px 10px;
+    align-items: center;
+}
+
+.popup.active{
+    animation: popup .5s ease-in-out;
+    display: flex;
+}
+
+@keyframes popup{
+    0%{
+        transform: translateY(-300px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.popup span{
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 0 0 2px yellow;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    color: yellow;
+}
+
+.popup .buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.popup .buttons button{
+    width: calc(100% / 2 - 10px);
+    border-radius: 5px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.popup .buttons .cancel{
+    background-color: #aaa;
+}
+
+.popup .buttons .delete{
+    background-color: red;
+    color: #eee;
+}
+
+.popbtn{
+    padding: 0 20px;
+    height: 30px;
+    font-size: 16px;
+    background-color: blue;
+    color: #eee;
+    border-radius: 5px;
+    font-weight: 900;
+    cursor: pointer;
+}
